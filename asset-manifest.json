@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/zentest/static/css/main.a1fa7993.chunk.css",
+    "main.js": "/zentest/static/js/main.d5879ee1.chunk.js",
+    "main.js.map": "/zentest/static/js/main.d5879ee1.chunk.js.map",
+    "runtime-main.js": "/zentest/static/js/runtime-main.d5d679fd.js",
+    "runtime-main.js.map": "/zentest/static/js/runtime-main.d5d679fd.js.map",
+    "static/js/2.3b8c20a1.chunk.js": "/zentest/static/js/2.3b8c20a1.chunk.js",
+    "static/js/2.3b8c20a1.chunk.js.map": "/zentest/static/js/2.3b8c20a1.chunk.js.map",
+    "static/js/3.7fc520f2.chunk.js": "/zentest/static/js/3.7fc520f2.chunk.js",
+    "static/js/3.7fc520f2.chunk.js.map": "/zentest/static/js/3.7fc520f2.chunk.js.map",
+    "index.html": "/zentest/index.html",
+    "static/css/main.a1fa7993.chunk.css.map": "/zentest/static/css/main.a1fa7993.chunk.css.map",
+    "static/js/2.3b8c20a1.chunk.js.LICENSE.txt": "/zentest/static/js/2.3b8c20a1.chunk.js.LICENSE.txt",
+    "static/media/logo.70902a9a.png": "/zentest/static/media/logo.70902a9a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5d679fd.js",
+    "static/js/2.3b8c20a1.chunk.js",
+    "static/css/main.a1fa7993.chunk.css",
+    "static/js/main.d5879ee1.chunk.js"
+  ]
+}
