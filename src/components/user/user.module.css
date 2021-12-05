@@ -1,0 +1,43 @@
+.item {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    border-bottom: 1px solid #888888;
+}
+
+.name {
+    min-width: 56px;
+    width: 14%;
+    padding: 4px;
+}
+
+.showPasswordIcon {
+    margin-left: 1px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.activeStatus {
+    background-color: #76FC55;
+    color: white;
+    height: 14px;
+    border-radius: 6px;
+    padding-bottom: 10px;
+    width: 60px;
+    display: inline-block;
+    padding-left: 4px;
+}
+
+.noActiveStatus {
+    background-color: #fc5555;
+    color: white;
+    height: 14px;
+    border-radius: 6px;
+    padding-bottom: 10px;
+    width: 60px;
+    display: inline-block;
+    padding-left: 4px;
+}

@@ -1,0 +1,18 @@
+.header {
+    width: 100vw;
+    min-height: 40px;
+    background-color: #BADAD1;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.component {
+    margin: 20px;
+    display: inline-block;
+}
+
+.logo {
+    height: 40px;
+    margin: 10px 20px 10px;
+}

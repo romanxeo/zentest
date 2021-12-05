@@ -1,0 +1,29 @@
+.item {
+    background-color: #D5D5D5;
+    min-height: 50px;
+    min-width: 95px;
+}
+
+.item a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 15px;
+    width: 100% - 12px;
+    background-color: #D5D5D5;
+    padding: 6px 6px 6px 6px;
+}
+
+.item a:hover {
+    background-image: -webkit-linear-gradient(top, #D5D5D5, #c1c1c1);
+    background-image: -moz-linear-gradient(top, #D5D5D5, #c1c1c1);
+    background-image: -ms-linear-gradient(top, #D5D5D5, #c1c1c1);
+    background-image: -o-linear-gradient(top, #D5D5D5, #c1c1c1);
+    background-image: linear-gradient(to bottom, #D5D5D5, #c1c1c1);
+}
+
+.item a.active {
+    font-weight: bold;
+    background-color: #c1c1c1;
+}
