@@ -5,23 +5,26 @@ import {AppRootStateType} from "../../store/store";
 import {usersType} from "../../api/api";
 import User from "../user/user";
 import HeaderTable from "../headerTable/HeaderTable";
+import SearchBlock from '../searchBlock/SearchBlock';
 
-const ShowUsers: React.FC = props => {
+const GetUser: React.FC = props => {
 
-    const users = useSelector<AppRootStateType, Array<usersType>>(state => state.zen.users)
+    const users = useSelector<AppRootStateType, Array<usersType>>(state => state.zen.getUser)
 
     const user = users.map(u => <User key={u.id} id={u.id}/>)
 
     return (
         <div>
-            <div className={cs.title}>User list</div>
+            <div className={cs.title}>Get user by id</div>
+
+            <SearchBlock/>
+
             <div className={cs.container}>
                 <HeaderTable/>
-                {user}
+                {user.length !== 0 ? user : <p className={cs.nullMessage}>Enter user id to search</p>}
             </div>
-
         </div>
     )
 }
 
-export default ShowUsers
+export default GetUser

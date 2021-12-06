@@ -7,22 +7,30 @@ const instance = axios.create({
 
 export const fastAPI = {
     showUsers() {
-        debugger
         return instance.get(`show_users/`)
-    },
-/*    showUserById(userId: number) {
-        return instance.get(`${userId}/`)
     },
     createUser(payload: createUserType) {
         return instance.post(`create_user/`, payload)
     },
+    getUser(user_id: number) {
+        return instance.get(`${user_id}/`)
+    },
+}
+
+/*export const testAPI = {
+    createUser(payload: createUserType) {
+        return axios.post(`create_user/`, payload, {withCredentials: true,})
+    },
+}*/
+/*
+
     updateUser(userId: number, payload: createUserType) {
         return instance.put(`update_user/${userId}/`, payload)
     },
     deleteUser(userId: number) {
         return instance.delete(`delete_user/${userId}/`)
     }*/
-}
+/*}*/
 
 export type createUserType = {
     user_name: string,

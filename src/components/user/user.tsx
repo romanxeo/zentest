@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import { AppRootStateType } from '../../store/store';
 import sh0 from '../../assets/sh0.png'
 import sh1 from '../../assets/sh1.png'
-import ActionButton from '../ActionButton/ActionButton';
+import ActionButton from '../actionButton/ActionButton';
 
 type propsType = {
     id: number
@@ -29,7 +29,7 @@ const User: React.FC<propsType> = props => {
             <div className={s.name}>{user.email}</div>
             <div className={s.name}>
                 <span>{showPassword ? user.password : "******"}</span>
-                <img src={showPassword ? sh1 : sh0} className={s.showPasswordIcon} onClick={() => setShowPassword(!showPassword)}/>
+                <img src={showPassword ? sh1 : sh0} className={s.showPasswordIcon} onClick={() => setShowPassword(!showPassword)} alt=''/>
             </div>
             <div className={s.name}>
                 <span className={user.status === 'active' ? s.activeStatus : s.noActiveStatus}>{user.status}</span>

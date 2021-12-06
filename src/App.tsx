@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react';
-import {Redirect, Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import s from './App.module.css';
-import Content from './components/content/Content';
 import Header from './components/header/Header';
 import ShowUsers from './components/showUsers/ShowUsers';
 import Sidebar from './components/sidebar/Sidebar';
 import {showUsersTC} from "./store/zenReducer";
 import {useDispatch} from "react-redux";
+import CreateUsers from "./components/createUser/CreateUser";
+import GetUser from "./components/getUser/GetUser";
 
 function App() {
 
@@ -14,15 +15,8 @@ function App() {
 
     useEffect(() => {
         dispatch(showUsersTC())
-    }, [])
+    }, [dispatch])
 
-/*
-    useEffect(() => {
-        fetch('https://zentesting.herokuapp.com/show_users/')
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-    }, [])
-*/
 
     return (
         <div>
@@ -31,7 +25,8 @@ function App() {
                 <Sidebar/>
                 <Switch>
                     <Route path={'/show_users'} render={() => <ShowUsers/>}/>
-                    <Route path={'/create_user'} render={() => <Content/>}/>
+                    <Route path={'/create_user'} render={() => <CreateUsers/>}/>
+                    <Route path={'/get_user'} render={() => <GetUser/>}/>
                 </Switch>
             </div>
         </div>

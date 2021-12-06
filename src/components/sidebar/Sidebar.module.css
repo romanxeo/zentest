@@ -23,6 +23,11 @@
     background-image: linear-gradient(to bottom, #D5D5D5, #c1c1c1);
 }
 
+.item a:active {
+    position: relative;
+    top: 1px;
+}
+
 .item a.active {
     font-weight: bold;
     background-color: #c1c1c1;

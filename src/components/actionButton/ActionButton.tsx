@@ -15,7 +15,7 @@ const ActionButton: React.FC<propsType> = props => {
         <div className={s.dropdown}>
             <div className={s.dropbtn}>Action</div>
             <div className={s.dropdownContent}>
-                <div>Delete</div>
+                <div>Delete {id}</div>
                 <div>Update</div>
             </div>
         </div>
