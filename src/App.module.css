@@ -3,7 +3,7 @@
     width: 100%;
     margin: 0 auto;
     min-height: 600px;
-    background-color: #fafafb;
+    background-color: #fafafa;
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 11fr;
 }
