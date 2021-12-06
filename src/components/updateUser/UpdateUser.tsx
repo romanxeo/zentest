@@ -41,7 +41,7 @@ const UpdateUser: React.FC = props => {
 
     const onSubmit = () => {
         if (name !== '' && email !== '' && password !== '' && emailValidate) {
-            /*dispatch(createUserTC(name, email, password))*/
+            /*dispatch(updateUserTC(user.id, name, email, password))*/
             dispatch(updateUserAC(user.id, name, email, password))
             setName('');
             setEmail('');

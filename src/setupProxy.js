@@ -18,7 +18,7 @@ module.exports = app => {
         )
     )
     app.use(
-        createProxyMiddleware('/3',
+        createProxyMiddleware('/update_user/',
             {
                 target: 'https://zentesting.herokuapp.com',
                 changeOrigin: true

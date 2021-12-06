@@ -91,15 +91,13 @@ export const zenReducer = (state: InitStateType = initState, action: actionType)
         case 'TEST/searchUser': {
             /*ACTION для поиска юзера по локальной базе (работает)*/
             let copyState = {...state}
-            const user = state.users.filter(u => u.id === action.userId)
-            copyState.getUser = user
+            copyState.getUser = state.users.filter(u => u.id === action.userId)
             return copyState
         }
         case 'TEST/createUser': {
             /*ACTION для добавления юзера в локальную базу (работает)*/
             let newUser = {...action.payload, id: state.count+1, status: 'noactive', created_at: 'today', updated_at: 'today'}
-            let copyState = {...state, users: [...state.users, newUser], count: state.count+1}
-            return copyState
+            return {...state, users: [...state.users, newUser], count: state.count+1}
         }
         case 'TEST/updateUser': {
             /*ACTION для обновления юзера в локальной базе (работает)*/
@@ -181,12 +179,10 @@ export const updateUserTC = (id: number, user_name: string, email: string, passw
                 dispatch(showUsersTC())
             })
             .catch(e => {
-                alert('error')
+                alert('updateUserTC error')
             })
     }
 }
-
-
 
 //thunk для удаления юзера с сервера (не работает)
 export const deleteUserTC = (user_id: number) => {
@@ -196,7 +192,7 @@ export const deleteUserTC = (user_id: number) => {
                 dispatch(showUsersTC())
             })
             .catch(e => {
-                alert('error')
+                alert('deleteUserTC error')
             })
     }
 }
