@@ -1,5 +1,9 @@
-input {display: none;}
+
 label {cursor: pointer;}
+
+.nav__check {
+    display: none
+}
 
 .nav {user-select: none;}
 

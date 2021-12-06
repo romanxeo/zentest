@@ -16,6 +16,7 @@ const SearchBlock: React.FC = props => {
 
     const onSubmit = () => {
         dispatch(searchUserAC(+searchId))
+        setSearchId('')
     }
 
     return (

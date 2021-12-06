@@ -1,21 +1,28 @@
 import React, { useState } from 'react'
-import s from './CreateUser.module.css'
-import cs from '../common/common.module.css'
+import s from "./UpdateUser.module.css"
+import {useDispatch, useSelector} from "react-redux";
+import { AppRootStateType } from '../../store/store';
+import { useParams } from 'react-router-dom';
+import {updateUserAC} from "../../store/zenReducer";
+import cs from "../common/common.module.css";
 import Input from "../Input/Input";
-import {createUserAC, createUserTC} from "../../store/zenReducer";
-import {useDispatch} from "react-redux";
 
 
-const CreateUsers: React.FC = props => {
+const UpdateUser: React.FC = props => {
+
+    let {id} = useParams<{ id: string }>()
+
+    let user = useSelector<AppRootStateType, any>(state => state.zen.users
+        .find(u => u.id === +id)
+    )
 
     const dispatch = useDispatch()
 
-    const [name, setName] = useState<string>('')
-    const [email, setEmail] = useState<string>('')
-    const [password, setPassword] = useState<string>('')
+    const [name, setName] = useState<string>(user.user_name)
+    const [email, setEmail] = useState<string>(user.email)
+    const [password, setPassword] = useState<string>(user.password)
     const [error, setError] = useState<string>('')
     const [emailValidate, setEmailValidate] = useState<boolean>(false)
-
 
     const nameHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
@@ -35,7 +42,7 @@ const CreateUsers: React.FC = props => {
     const onSubmit = () => {
         if (name !== '' && email !== '' && password !== '' && emailValidate) {
             /*dispatch(createUserTC(name, email, password))*/
-            dispatch(createUserAC(name, email, password))
+            dispatch(updateUserAC(user.id, name, email, password))
             setName('');
             setEmail('');
             setPassword('');
@@ -47,15 +54,15 @@ const CreateUsers: React.FC = props => {
 
     return (
         <div>
-            <div className={cs.title}>Create user</div>
+            <div className={cs.title}>Update user data with id: {user.id}</div>
             <div className={cs.container}>
                 <div className={s.firstLine}>
                     <Input label={'Name'} type={'text'} value={name} onChange={nameHandler} />
                     <Input label={'Email'} type={'email'} value={email} onChange={emailHandler} setValidate={setEmailValidate}/>
                 </div>
                 <div className={s.secondLine}>
-                    <Input label={'Password'} type={'password'} value={password} onChange={passwordHandler}/>
-                    <button className={cs.button} onClick={onSubmit}>Create user</button>
+                    <Input label={'Password'} type={'text'} value={password} onChange={passwordHandler}/>
+                    <button className={cs.button} onClick={onSubmit}>Update user data</button>
                     <div className={cs.error}>{error && error}</div>
                 </div>
             </div>
@@ -63,4 +70,4 @@ const CreateUsers: React.FC = props => {
     )
 }
 
-export default CreateUsers
+export default UpdateUser

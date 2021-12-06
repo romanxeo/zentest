@@ -1,0 +1,20 @@
+.firstLine {
+    padding-top: 10px;
+    min-width: 380px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.secondLine {
+    padding-top: 15px;
+    min-width: 380px;
+    max-width: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+

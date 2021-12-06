@@ -9,7 +9,6 @@ const Header: React.FC = props => {
         <div className={s.header}>
             <img className={s.logo} src={logo} alt={''}/>
             <BurgerMenu/>
-            {/*<div className={s.component}>avatar</div>*/}
         </div>
     )
 }

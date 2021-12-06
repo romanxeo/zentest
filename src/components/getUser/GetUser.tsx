@@ -12,7 +12,7 @@ const GetUser: React.FC = props => {
     const users = useSelector<AppRootStateType, Array<usersType>>(state => state.zen.getUser)
 
     const user = users.map(u => <User key={u.id} id={u.id}/>)
-
+    debugger
     return (
         <div>
             <div className={cs.title}>Get user by id</div>

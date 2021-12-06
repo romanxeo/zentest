@@ -25,4 +25,12 @@ module.exports = app => {
             }
         )
     )
+    app.use(
+        createProxyMiddleware('/delete_user/',
+            {
+                target: 'https://zentesting.herokuapp.com',
+                changeOrigin: true
+            }
+        )
+    )
 }
