@@ -1,5 +1,6 @@
 {
   "name": "zentest",
+  "homepage": "https://romanxeo.github.io/zentest",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
