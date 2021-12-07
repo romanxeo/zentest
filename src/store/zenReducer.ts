@@ -1,5 +1,4 @@
 import {createUserType, fastAPI, usersType} from "../api/api"
-import { AppRootStateType } from "./store"
 
 /*ACTION для запроса всех юзеров с сервера (работает)*/
 export const showUsersAC = (users: Array<usersType>) => {

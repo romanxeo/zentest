@@ -71,7 +71,7 @@
 
 .container__firstLine {
     padding-top: 10px;
-    min-width: 280px;
+    min-width: 270px;
     max-width: 520px;
     display: flex;
     justify-content: space-between;
@@ -81,7 +81,7 @@
 
 .container__secondLine {
     padding-top: 15px;
-    min-width: 280px;
+    min-width: 270px;
     max-width: 520px;
     margin-left: 10px;
     margin-right: 10px;
