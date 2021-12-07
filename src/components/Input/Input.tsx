@@ -58,7 +58,7 @@ const Import: React.FC<propsType> = props => {
 
     return (
         <div className={s.container}>
-            <div className={s.inputContainer}>
+            <div className={s.container__input}>
                 <input
                     className={s.input}
                     name={label}
@@ -68,9 +68,8 @@ const Import: React.FC<propsType> = props => {
                     onChange={e => changeHandler(e)}
                     onBlur={e => blurHandler(e)}
                 />
-                <div className={s.cut}></div>
-                <label className={s.placeholder}>{label}</label>
-                <div className={s.error}>{error && error}</div>
+                <label className={s.container__placeholder}>{label}</label>
+                <div className={s.container__error}>{error && error}</div>
             </div>
         </div>
     )

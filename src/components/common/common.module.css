@@ -6,16 +6,18 @@
 
 .container {
     margin: 10px;
-    min-width: 400px;
+    min-width: 280px;
     min-height: 100px;
     background-color: #D5D5D5;
-    padding-bottom: 10px;
+
+    padding: 20px 10px 10px
 }
 
 .button {
     width: 100%;
-    background-color: #76FC55;
-    color: white;
+    background-color: #3DDCD2;
+    color: #000000;
+    font-weight: bold;
     height: 14px;
     border-radius: 6px;
     padding-top: 10px;
@@ -28,11 +30,11 @@
 }
 
 .button:hover {
-    background-image: -webkit-linear-gradient(top, #76FC55, #4db637);
-    background-image: -moz-linear-gradient(top, #76FC55, #4db637);
-    background-image: -ms-linear-gradient(top, #76FC55, #4db637);
-    background-image: -o-linear-gradient(top, #76FC55, #4db637);
-    background-image: linear-gradient(to bottom, #76FC55, #4db637);
+    background-image: -webkit-linear-gradient(top, #3DDCD2, #09c9bc);
+    background-image: -moz-linear-gradient(top, #3DDCD2, #09c9bc);
+    background-image: -ms-linear-gradient(top, #3DDCD2, #09c9bc);
+    background-image: -o-linear-gradient(top, #3DDCD2, #09c9bc);
+    background-image: linear-gradient(to bottom, #3DDCD2, #09c9bc);
 }
 
 .button:active {
@@ -50,6 +52,10 @@
     font-size: 20px;
 }
 
+.table__hidden {
+    display: inline
+}
+
 @media screen and (max-width: 600px) {
     .container {
         margin: 0;
@@ -58,4 +64,25 @@
         margin: 5px;
         font-size: 28px;
     }
+    .table__hidden {
+        display: none
+    }
+}
+
+.container__firstLine {
+    padding-top: 10px;
+    min-width: 280px;
+    max-width: 520px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container__secondLine {
+    padding-top: 15px;
+    min-width: 280px;
+    max-width: 520px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

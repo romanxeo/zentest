@@ -149,8 +149,6 @@ export const updateUserTC = (id: number, user_name: string, email: string, passw
             updated_at: update_date
         }
 
-        debugger
-
         fastAPI.updateUser(id, payload)
             .then(res => {
                 dispatch(showUsersTC())

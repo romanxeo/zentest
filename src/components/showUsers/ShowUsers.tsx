@@ -9,7 +9,6 @@ import HeaderTable from "../headerTable/HeaderTable";
 const ShowUsers: React.FC = props => {
 
     const users = useSelector<AppRootStateType, Array<usersType>>(state => state.zen.users)
-
     const user = users.map(u => <User key={u.id} id={u.id}/>)
 
     return (

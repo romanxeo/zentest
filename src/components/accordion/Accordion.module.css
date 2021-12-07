@@ -1,41 +1,42 @@
-.accordionTitle {
+.accordion__title {
     margin-top: 10px;
-    background-color: #c1c1c1;
+    background-color: #C0BEBE;
     padding: 6px 6px 6px 6px;
-
-    color: #ffffff;
+    color: #000000;
     font-weight: normal;
     font-size: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.accordionTitle:hover {
-    background-image: -webkit-linear-gradient(top, #c1c1c1, #aaaaaa);
-    background-image: -moz-linear-gradient(top, #c1c1c1, #aaaaaa);
-    background-image: -ms-linear-gradient(top, #c1c1c1, #aaaaaa);
-    background-image: -o-linear-gradient(top, #c1c1c1, #aaaaaa);
-    background-image: linear-gradient(to bottom, #c1c1c1, #aaaaaa);
+.accordion__title:hover {
+    background-image: -webkit-linear-gradient(top, #C0BEBE, #aaaaaa);
+    background-image: -moz-linear-gradient(top, #C0BEBE, #aaaaaa);
+    background-image: -ms-linear-gradient(top, #C0BEBE, #aaaaaa);
+    background-image: -o-linear-gradient(top, #C0BEBE, #aaaaaa);
+    background-image: linear-gradient(to bottom, #C0BEBE, #aaaaaa);
 }
 
-.accordionTitle:active {
+.accordion__title:active {
     position: relative;
     top: 1px;
 }
 
-.accordionTitleActive {
+.accordion__title__active {
     font-weight: bold;
-    background-color: #aaaaaa;
+    background-color: #C0BEBE;
 }
 
-.description {
+.accordion__description {
     padding: 0px 8px 0px;
     max-height: 0;
     overflow: hidden;
-    background: #c1c1c1;
+    background: #C0BEBE;
     -webkit-transition: max-height .8s;
     -o-transition: max-height .8s;
     transition: max-height .8s;
 }
 
-.descActiv {
+.accordion__description__active {
     max-height: 100vh;
 }

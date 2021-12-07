@@ -16,9 +16,7 @@ const GetUser: React.FC = props => {
     return (
         <div>
             <div className={cs.title}>Get user by id</div>
-
             <SearchBlock/>
-
             <div className={cs.container}>
                 <HeaderTable/>
                 {user.length !== 0 ? user : <p className={cs.nullMessage}>Enter user id to search</p>}

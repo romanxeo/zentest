@@ -7,12 +7,7 @@
     justify-content: space-between;
 }
 
-.component {
-    margin: 20px;
-    display: inline-block;
-}
-
-.logo {
+.header__logo {
     height: 40px;
     margin: 10px 20px 10px;
 }

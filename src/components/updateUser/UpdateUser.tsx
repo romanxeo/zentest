@@ -54,12 +54,12 @@ const UpdateUser: React.FC = props => {
     return (
         <div>
             <div className={cs.title}>Update user data with id: {user.id}</div>
-            <div className={cs.container}>
-                <div className={s.firstLine}>
+            <div className={`${cs.container} ${s.container__updateUser}`}>
+                <div className={cs.container__firstLine}>
                     <Input label={'Name'} type={'text'} value={name} onChange={nameHandler} />
                     <Input label={'Email'} type={'email'} value={email} onChange={emailHandler} setValidate={setEmailValidate}/>
                 </div>
-                <div className={s.secondLine}>
+                <div className={cs.container__secondLine}>
                     <Input label={'Password'} type={'text'} value={password} onChange={passwordHandler}/>
                     <button className={cs.button} onClick={onSubmit}>Update user data</button>
                     <div className={cs.error}>{error && error}</div>

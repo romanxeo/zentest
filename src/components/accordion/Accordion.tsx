@@ -21,10 +21,11 @@ const Accordion: React.FC<propsType> = props => {
 
     return (
         <div>
-            <div className={open ? `${s.accordionTitle} ${s.accordionTitleActive}` : s.accordionTitle} onClick={clickHandler}>
-                {title}
+            <div className={open ? `${s.accordion__title} ${s.accordion__title__active}` : s.accordion__title} onClick={clickHandler}>
+                <div>{title}</div>
+                <div>{open ? '▲' : '▼'}</div>
             </div>
-            <div className={open ? `${s.description} ${s.descActiv}` : s.description}>
+            <div className={open ? `${s.accordion__description} ${s.accordion__description__active}` : s.accordion__description}>
                 {description}
             </div>
         </div>

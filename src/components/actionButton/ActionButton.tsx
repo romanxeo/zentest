@@ -26,9 +26,9 @@ const ActionButton: React.FC<propsType> = props => {
     }
 
     return (
-        <div className={s.dropdown}>
-            <div className={s.dropbtn}>Action</div>
-            <div className={s.dropdownContent}>
+        <div className={s.item}>
+            <div className={s.item_dropButton}>Action</div>
+            <div className={s.item_dropContent}>
                 <div onClick={deleteHandler}>Delete</div>
                 <div onClick={updateHandler}>Update</div>
             </div>

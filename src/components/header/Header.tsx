@@ -7,7 +7,7 @@ const Header: React.FC = props => {
 
     return (
         <div className={s.header}>
-            <img className={s.logo} src={logo} alt={''}/>
+            <img className={s.header__logo} src={logo} alt={''}/>
             <BurgerMenu/>
         </div>
     )

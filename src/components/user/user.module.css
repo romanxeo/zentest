@@ -4,23 +4,24 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #888888;
 }
 
-.name {
+.item__name {
     min-width: 56px;
     width: 14%;
     padding: 4px;
 }
 
-.showPasswordIcon {
+.item__showPasswordIcon {
     margin-left: 1px;
     height: 14px;
     cursor: pointer;
 }
 
-.activeStatus {
+.item__activeStatus {
     background-color: #76FC55;
     color: white;
     height: 14px;
@@ -31,7 +32,7 @@
     padding-left: 4px;
 }
 
-.noActiveStatus {
+.item__noActiveStatus {
     background-color: #fc5555;
     color: white;
     height: 14px;
