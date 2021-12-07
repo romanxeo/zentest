@@ -3,7 +3,7 @@ import s from './SearchBlock.module.css'
 import cs from '../common/common.module.css'
 import Input from "../Input/Input";
 import { useDispatch } from 'react-redux';
-import {getUserTC, searchUserAC} from "../../store/zenReducer";
+import {getUserTC} from "../../store/zenReducer";
 
 const SearchBlock: React.FC = props => {
 
@@ -15,8 +15,7 @@ const SearchBlock: React.FC = props => {
     }
 
     const onSubmit = () => {
-        dispatch(searchUserAC(+searchId))
-        /*dispatch(getUserTC(+searchId))*/
+        dispatch(getUserTC(+searchId))
         setSearchId('')
     }
 

@@ -3,7 +3,7 @@ import s from "./UpdateUser.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import { AppRootStateType } from '../../store/store';
 import { useParams } from 'react-router-dom';
-import {updateUserAC} from "../../store/zenReducer";
+import {updateUserTC} from "../../store/zenReducer";
 import cs from "../common/common.module.css";
 import Input from "../Input/Input";
 
@@ -41,8 +41,7 @@ const UpdateUser: React.FC = props => {
 
     const onSubmit = () => {
         if (name !== '' && email !== '' && password !== '' && emailValidate) {
-            /*dispatch(updateUserTC(user.id, name, email, password))*/
-            dispatch(updateUserAC(user.id, name, email, password))
+            dispatch(updateUserTC(user.id, name, email, password, user.created_at))
             setName('');
             setEmail('');
             setPassword('');

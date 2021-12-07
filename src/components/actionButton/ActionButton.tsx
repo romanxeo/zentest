@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './ActionButton.module.css'
 import {useDispatch} from "react-redux";
-import {deleteUserAC, deleteUserTC} from '../../store/zenReducer';
+import {deleteUserTC} from '../../store/zenReducer';
 import { useHistory } from 'react-router-dom';
 
 type propsType = {
@@ -18,7 +18,7 @@ const ActionButton: React.FC<propsType> = props => {
     } = props
 
     const deleteHandler = () => {
-        dispatch(deleteUserAC(id))
+        dispatch(deleteUserTC(id))
     }
 
     const updateHandler = () => {

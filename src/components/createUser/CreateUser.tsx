@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import s from './CreateUser.module.css'
 import cs from '../common/common.module.css'
 import Input from "../Input/Input";
-import {createUserAC, createUserTC} from "../../store/zenReducer";
+import {createUserTC} from "../../store/zenReducer";
 import {useDispatch} from "react-redux";
 
 
@@ -34,8 +34,7 @@ const CreateUsers: React.FC = props => {
 
     const onSubmit = () => {
         if (name !== '' && email !== '' && password !== '' && emailValidate) {
-            /*dispatch(createUserTC(name, email, password))*/
-            dispatch(createUserAC(name, email, password))
+            dispatch(createUserTC(name, email, password))
             setName('');
             setEmail('');
             setPassword('');
